@@ -1,0 +1,33 @@
+.becauseGrid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.becauseGrid4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.becauseGrid4 > img{
+    width: 100px;
+    height: 100px;
+}
+.becauseGrid__text{
+color: #242D63;
+
+text-align: center;
+font-family: 'Lato', sans-serif;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+@media (max-width:500px){
+    .becauseGrid {
+        display: grid;
+        grid-template-columns: repeat(1,1fr) !important;
+
+    }
+    .becauseGrid4{
+        margin: 20px 0px;
+    }
+}

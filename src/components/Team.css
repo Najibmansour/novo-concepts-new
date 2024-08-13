@@ -1,0 +1,104 @@
+.team {
+  color: #ec2028;
+  margin-top: 30px;
+  font-family: "Wosker";
+  font-size: 100px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.team__img__1 {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1000px;
+  margin: 20px auto;
+}
+.team__img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+span.team__img__name.team__img__pos {
+    font-size: 16px;
+}
+.team__img__name{
+color: #242D63;
+
+text-align: center;
+font-family: Lato;
+padding: 3px 0px;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+.team__img > img {
+  width: 260px;
+  height: 340px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 23px 4px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+}
+.team__img__2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1200px;
+  margin: 50px auto;
+}
+@media (max-width:500px){
+  .team {
+  
+    font-size: 61px;
+   
+}
+    .team__img__1{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .team__img__2{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}
+@media (min-width:700px) and (max-width:1100px){
+  .story__right {
+    width: fit-content;
+    text-align: justify;
+}
+.banner__h2 {
+  font-family: Playfair;
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 133.3px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #fff;
+}
+.banner {
+  background: url("https://i.imgur.com/wkRakyr.jpeg");
+  height: 419px;
+  background-position: center;
+  background-size: cover;
+}
+img.banner__center__img {
+  width: 200px !important;
+  object-fit: cover;
+  height: 300px !important;
+}
+  .team__img__1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.team__img__2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.story__right {
+  width: fit-content;
+  text-align: justify;
+}
+}

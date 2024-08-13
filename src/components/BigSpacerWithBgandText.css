@@ -1,0 +1,40 @@
+
+.bigSpacer__text{
+    color: #FFF;
+
+text-align: center;
+/* lato font family */
+font-family: 'Lato', sans-serif;
+
+font-size: 65px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+@media (max-width:500px){
+    .bigSpacer__text {
+    
+        width: 100vw !important;
+        text-transform: capitalize;
+    }
+}
+.bigSpacer__text {
+    color: #fff !important;
+    text-align: center;
+   
+    font-weight: 400;
+    line-height: normal;
+    width: 30vw;
+    text-transform: capitalize;
+}
+.bigSpacer {
+    background: url("https://i.imgur.com/8HklC5S.jpeg");
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+}

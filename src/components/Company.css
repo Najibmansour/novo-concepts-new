@@ -1,0 +1,97 @@
+.company__left__h2{
+    font-size: 170px;
+}
+.our-story-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+  padding-top: 100px;
+  }
+  .description__header{
+color: #EC2028 !important;
+  }
+  .story__right {
+    width: 770px;
+    text-align: justify;
+}
+.ques__c{
+  width: 600px;
+}
+  
+  .our-story-content {
+    max-width: 800px;
+  }
+  
+  .question-text {
+    color: #242D63;
+    margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .title-text {
+    color: #EC2028;
+    
+    font-family: "Wosker";
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .description-text {
+    color: #242D63;
+
+    font-family: "Montserrat";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .story__left{
+    width: 480px;
+  }
+  .work{
+    margin-left: 100px;
+    margin-top: 100px;
+  }
+@media (max-width:500px){
+  .ques__c{
+    width: 300px;
+  }
+  .work {
+    margin-left: 24px;
+    margin-top: 100px;
+}
+  .story__left {
+    width: 300px !important;
+}
+  .our-story-container {
+    display: flex;
+    justify-content: center;
+  padding-top: 50px;
+    flex-direction: column;
+}
+.story__right {
+  width: 301px;
+  text-align: justify;
+}
+.title-text {
+ 
+  font-size: 64px;
+
+  margin: 19px 0px;
+}
+}
+@media (min-width:700px) and (max-width:1100px){
+  .our-story-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    padding-top: 100px;
+    flex-direction: column;
+}
+}

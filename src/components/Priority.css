@@ -1,0 +1,11 @@
+.priority__ul > li {
+    color: #242D63;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
+}
+.priority__ul {
+   margin-bottom: 50px;
+}

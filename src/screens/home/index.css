@@ -1,0 +1,22 @@
+.banner{
+    background: url("https://i.imgur.com/wkRakyr.jpeg");
+    height: 680px;
+    background-position: center;
+    background-size: cover;
+}
+img.banner__center__img {
+    width: 500px;
+    height: 526px;
+    object-fit: cover;
+}
+.bg{
+    background-color: #BFD5B9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+.bigSpacer__text2{
+font-size:38px !important;
+
+}
