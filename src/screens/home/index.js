@@ -19,7 +19,7 @@ const Home = () => {
         <Header />
         <Banner
           img={"https://i.imgur.com/rfN31GV.pngz"}
-          leftText="Follow your BUSINESS"
+          leftText="Grow your BUSINESS"
           rightText="Reach the WORLD"
         />
       </div>
