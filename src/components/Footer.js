@@ -54,9 +54,9 @@ const Footer = () => {
               <a className="icon__footer" href={ROUTES.SOCIAL_LINK_WHATSAPP}>
                 <WhatsappIcon />
               </a>
-              <a className="icon__footer" href={ROUTES.SOCIAL_LINK_INSTAGRAM}>
+              {/* <a className="icon__footer" href={ROUTES.SOCIAL_LINK_INSTAGRAM}>
                 <InstagramIcon />
-              </a>
+              </a> */}
               <a className="icon__footer" href={ROUTES.SOCIAL_LINK_TELEGRAM}>
                 <TelegramIcon />
               </a>

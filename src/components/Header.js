@@ -106,9 +106,9 @@ const Header = () => {
             <a className="icon" href={ROUTES.SOCIAL_LINK_WHATSAPP}>
               <WhatsappIcon />
             </a>
-            <a className="icon" href={ROUTES.SOCIAL_LINK_INSTAGRAM}>
+            {/* <a className="icon" href={ROUTES.SOCIAL_LINK_INSTAGRAM}>
               <InstagramIcon />
-            </a>
+            </a> */}
             <a className="icon" href={ROUTES.SOCIAL_LINK_TELEGRAM}>
               <TelegramIcon />
             </a>
