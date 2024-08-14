@@ -1,61 +1,59 @@
 .bannerCmp {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 200px;
+}
+img.banner__center__img {
+  width: 500px;
+}
+
+.banner__h2 {
+  font-family: Playfair;
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 133.3px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #fff;
+}
+
+.banner__right > .banner__h2 {
+  width: 200px;
+}
+@media (max-width: 500px) {
+  .bannerCmp {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(1, 1fr);
     place-items: center;
     max-width: 1100px;
     margin: 0 auto;
     height: 200px;
+  }
+  .banner {
+    background: url("https://i.imgur.com/wkRakyr.jpeg");
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+  }
+  nav {
+    display: none;
+  }
+  img.banner__center__img {
+    height: 324px;
+  }
+  img.banner__center__img {
+    width: 276px !important;
+  }
+  .banner__h2 {
+    font-size: 33px;
 
-}
-img.banner__center__img {
-    width: 500px;
-}
-
-.banner__h2{
-    font-family: Playfair ;
-    font-size: 60px;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 133.3px;
-    letter-spacing: 0.05em;
-    text-align: left;
-    color: #fff;
-  
-}
-
-.banner__right>.banner__h2 {
-    width: 200px;
-}
-@media (max-width:500px){
-    .bannerCmp {
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        place-items: center;
-        max-width: 1100px;
-        margin: 0 auto;
-        height: 200px;
-    }
-    .banner {
-        background: url("https://i.imgur.com/wkRakyr.jpeg");
-        height: 700px;
-        background-position: center;
-        background-size: cover;
-    }
-    nav{
-        display: none;
-    }
-    img.banner__center__img {
-        height: 324px;
-    }
-    img.banner__center__img {
-        width: 276px !important;
-    }
-    .banner__h2 {
-        font-size: 33px;
-    
-        text-align: center;
-    }
-    .banner__right>.banner__h2 {
-        width: 320px;
-    }
+    text-align: center;
+  }
+  .banner__right > .banner__h2 {
+    width: 320px;
+  }
 }
