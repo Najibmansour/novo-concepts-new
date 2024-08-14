@@ -29,29 +29,13 @@ const Header = () => {
             onClick={() => navigate(ROUTES.HOME)}
           />
         </div>
-        <div className="icon__flex__container ">
-          <div className="icon__container">
-            <a className="icon" href={ROUTES.SOCIAL_LINK_WHATSAPP}>
-              <WhatsappIcon />
-            </a>
-            <a className="icon" href={ROUTES.SOCIAL_LINK_INSTAGRAM}>
-              <InstagramIcon />
-            </a>
-            <a className="icon" href={ROUTES.SOCIAL_LINK_TELEGRAM}>
-              <TelegramIcon />
-            </a>
-            <a className="icon" href={ROUTES.SOCIAL_LINK_VK}>
-              <VKIcon />
-            </a>
-          </div>
-        </div>
 
         <div className="burger-menu" onClick={toggleMenu}>
-          <div className={`line ${menuOpen ? "open" : ""}`}></div>
-          <div className={`line ${menuOpen ? "open" : ""}`}></div>
-          <div className={`line ${menuOpen ? "open" : ""}`}></div>
+          <div className={'line ${menuOpen ? "open" : ""}'}></div>
+          <div className={'line ${menuOpen ? "open" : ""}'}></div>
+          <div className={'line ${menuOpen ? "open" : ""}'}></div>
         </div>
-        <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
+        <ul className={'navbar-links ${menuOpen ? "open" : ""}'}>
           {/* <li className="dropdown">
             About us
             <ul className="dropdown-menu">
@@ -71,7 +55,7 @@ const Header = () => {
           </li>
           <li
             onClick={() => navigate(ROUTES.CONTACT)}
-            className="header__nav__text"
+            className="header_nav_text"
           >
             Contact us
           </li>
@@ -117,6 +101,22 @@ const Header = () => {
             )}
           </div> */}
         </ul>
+        <div className="icon__flex__container ">
+          <div className="icon__container">
+            <a className="icon" href={ROUTES.SOCIAL_LINK_WHATSAPP}>
+              <WhatsappIcon />
+            </a>
+            <a className="icon" href={ROUTES.SOCIAL_LINK_INSTAGRAM}>
+              <InstagramIcon />
+            </a>
+            <a className="icon" href={ROUTES.SOCIAL_LINK_TELEGRAM}>
+              <TelegramIcon />
+            </a>
+            <a className="icon" href={ROUTES.SOCIAL_LINK_VK}>
+              <VKIcon />
+            </a>
+          </div>
+        </div>
       </nav>
       <div className="spacer">
         <svg
