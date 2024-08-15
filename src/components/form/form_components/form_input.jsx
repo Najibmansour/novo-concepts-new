@@ -115,7 +115,10 @@ function StarIcon(props) {
 
 export const CountrySelector = ({ setValue, use_name, title, errorsOBJ }) => {
   const [options, setOptions] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState("No Country");
+  const [selectedCountry, setSelectedCountry] = useState({
+    value: "No Country",
+    label: "No Country",
+  });
 
   useEffect(() => {
     // Fetch countries from the API
