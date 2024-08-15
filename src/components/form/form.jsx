@@ -3,7 +3,7 @@ import FormInput, {
   FormTextarea,
 } from "./form_components/form_input";
 import { useForm } from "react-hook-form";
-// import emailjs from "emailjs-com";
+import emailjs from "emailjs-com";
 
 import "./form.css"
 import { useEffect, useState } from "react";
@@ -20,30 +20,31 @@ const ContactForm = () => {
   const onSubmit = (e) => {
     console.log(e);
 
-    // emailjs
-    //   .send(
-    //     "service_wpzxtfq",
-    //     "template_u7fvc6k",
-    //     {
-    //       from_name: e.full_name,
-    //       from_email: e.email,
-    //       from_phone: e.phone,
-    //       message: e.message,
-    //       rating: e.rating,
-    //     },
-    //     "HGCm8a_xcqlZN-HfI"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //       reset();
-    //       // reload page
-    //       window.location.reload();
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    emailjs
+      .send(
+        "service_wpzxtfq",
+        "template_u7fvc6k",
+        {
+          from_name: e.full_name,
+          from_email: e.email,
+          from_phone: e.phone,
+          message: e.message,
+          rating: e.rating,
+          country: e.country
+        },
+        "HGCm8a_xcqlZN-HfI"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          reset();
+          // reload page
+          window.location.reload();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
 
