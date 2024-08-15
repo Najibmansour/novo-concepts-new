@@ -7,13 +7,6 @@ main {
   overflow-x: hidden;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 28px 0px;
-  width: 600px;
-}
-
 .input_container {
   display: flex;
   flex-direction: column;
@@ -22,7 +15,7 @@ form {
 }
 
 input {
-  width: 90%;
+  height: 100px;
   border-radius: 30px;
   padding: 1rem 1.5rem;
   border: #000000;
@@ -30,41 +23,44 @@ input {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  color: #101425;
+  color: #242D63;
   background-color: #bfd5b966;
 }
 
 input::placeholder {
-  opacity: 80%;
-  color: #242d63;
+  
+  color: #242d63AA;
 }
 
 label {
-  color: #242d63;
+  color: #EC2028;
   font-family: Lato;
-  font-size: 56px;
+  font-size:28px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
 textarea {
-  width: 90%;
-  height: 200px;
+  margin-top: 0px;
+  resize: none;
+  height: 269px;
   border-radius: 30px;
   padding: 1rem 1.5rem;
-  font-size: 32px;
+  font-family: Lato;
+  font-size: 28px;
+
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  color: #101425;
+  color: #242D63;
   background-color: #bfd5b966;
   border: #000000;
 }
 
 textarea::placeholder {
-  opacity: 80%;
-  color: #242d63;
+  
+  color: #242d63AA;
 }
 
 button {
@@ -73,7 +69,7 @@ button {
   font-weight: bold;
   border-radius: 15px;
   border: transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.5em 2em;
   font-size: 2em;
   font-family: "Lato", sans-serif ;
   font-weight: 500;
@@ -113,8 +109,48 @@ h2 {
   width: 800px;
 
   z-index: -99999;
-  opacity: 80%;
+  
 }
+
+
+.react-select-container{
+   height: 100px;
+  border-radius: 30px;
+  border: #000000;
+  font-size: 28px;
+  font-style: normal;
+  font-family: Lato;
+  font-weight: 400;
+  line-height: normal;
+  color: #242D63;
+  background-color: #bfd5b966;
+}
+
+
+.react-select__value-container{
+    height: 100px;
+    border-radius: 30px;
+
+}
+
+.react-select__indicators{
+  height: 100px;
+}
+
+
+.react-select__control{
+  border: #00000000;
+  border-radius: 30px;
+    padding-left: 20px;
+
+}
+
+.react-select__option--is-focused {
+  background-color: #EC2028;
+}
+
+
+
 
 @media only screen and (min-width: 0px) and (max-width: 500px) {
   /* all css here goes for mobile .. i'm not sure about how much pixel though :D */
@@ -150,27 +186,58 @@ h2 {
   }
 
   input:not(.exept) {
+    height: 64px;
     border-radius: 20px;
-    width: 300px;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   textarea {
-    width: 300px;
+    height: 160px;
     border-radius: 20px;
     padding: 0.5rem 1rem;
-    font-size: 20px;
+    font-size: 16px;
     background-color: #bfd5b966;
   }
 
   textarea::placeholder {
     color: #242d63;
-    opacity: 80%;
+    
   }
 
   button {
     font-size: 1.25rem;
   }
+
+
+.react-select-container{
+  height: 64px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+
+.react-select__value-container{
+   height: 64px;
+    border-radius: 20px;
+    font-size: 16px;
+
+}
+
+.react-select__indicators{
+  height: 64px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+
+.react-select__control{
+ height: 64px;
+    border-radius: 20px;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+
 }
 
 @media only screen and (min-width: 500px) and (max-width: 1000px) {
@@ -185,7 +252,7 @@ h2 {
     width: 600px;
 
     z-index: -99999;
-    opacity: 80%;
+    
   }
 
   h2 {

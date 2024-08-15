@@ -10,10 +10,10 @@ const Footer = () => {
   const navigate = useNavigate();
 
   return (
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="footer-col">
+    <footer className="footer">
+      <div className="container">
+        <div className="row">
+          <div className="footer-col">
             <h4>About Us</h4>
             <ul>
               <li>
@@ -27,7 +27,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div class="footer-col">
+          <div className="footer-col">
             <h4>Our Services</h4>
             <ul>
               <li>
@@ -48,7 +48,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div class="footer-col">
+          <div className="footer-col">
             <h4>follow us</h4>
             <div className="icon__container">
               <a className="icon__footer" href={ROUTES.SOCIAL_LINK_WHATSAPP}>

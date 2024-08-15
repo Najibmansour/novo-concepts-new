@@ -38,7 +38,7 @@ font-size:43px !important;
         color: #ec2028;
         margin-top: 30px;
         font-family: "Wosker";
-        font-size: 64px !important;
+        font-size: 56px !important;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -79,4 +79,12 @@ font-size:43px !important;
         text-align: left;
         color: #fff;
     }
+}
+
+
+
+
+
+.main__container {
+    background-color: green;
 }

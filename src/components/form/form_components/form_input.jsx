@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Controller } from "react-hook-form";
+import Select from "react-select";
 
 export default function FormInput({
   title,
@@ -8,16 +10,24 @@ export default function FormInput({
   use_name,
   restrictions,
   registerOBJ,
+  errorsOBJ
 }) {
   return (
     <div className="input_container">
-      <label>{title}:</label>
+      <div className="input__container">
+        <label>{title}</label>
+      </div>
       <input
         type="text"
         id={use_name}
         placeholder={placeholder}
         {...registerOBJ(use_name, restrictions)}
       />
+      {
+        <div className="error__container">
+          <li className="error__line">{errorsOBJ[use_name]?.message}</li>
+        </div>
+      }
     </div>
   );
 }
@@ -28,16 +38,24 @@ export function FormTextarea({
   use_name,
   restrictions,
   registerOBJ,
+  errorsOBJ
 }) {
   return (
     <div className="input_container">
-      <label>{title}:</label>
+      <div className="input__container">
+        <label>{title}</label>
+      </div>
       <textarea
         type="text"
         id={use_name}
         placeholder={placeholder}
         {...registerOBJ(use_name, restrictions)}
       />
+      {errorsOBJ[use_name] && (
+        <div className="error__container">
+          <li className="error__line">{errorsOBJ[use_name]?.message}</li>
+        </div>
+      )}
     </div>
   );
 }
@@ -91,3 +109,100 @@ function StarIcon(props) {
     </svg>
   );
 }
+
+
+
+
+export const CountrySelector = ({ setValue, use_name, title, errorsOBJ }) => {
+  const [options, setOptions] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState("No Country");
+
+  useEffect(() => {
+    // Fetch countries from the API
+    const fetchCountries = async () => {
+      try {
+        const response = await fetch("https://restcountries.com/v3.1/all"); // Example API URL
+        const data = await response.json();
+
+        // Format data for react-select
+        const countryOptions = data.map((country) => ({
+          value: country.name.common, // or country.cca3 for 3-letter codes
+          label: country.name.common,
+        }));
+
+        setOptions(countryOptions);
+      } catch (error) {
+        console.error("Error fetching countries:", error);
+      }
+    };
+
+    fetchCountries();
+  }, []);
+
+
+  useEffect(() => {
+    if (selectedCountry !== "") {
+      console.log("Selected country:", selectedCountry);
+      setValue(use_name, selectedCountry.value, { shouldValidate: true });
+    }
+  }, [selectedCountry]);
+
+  const handleChange = (selectedOption) => {
+    setSelectedCountry(selectedOption ? selectedOption : {value: "No Country", label: "No Country"});
+    };
+
+  return (
+    <div className="input_container">
+      <div className="input__container">
+        <label>{title}</label>
+
+        {errorsOBJ[use_name] && (
+          <div className="error__container">
+            <li className="error__line">{errorsOBJ[use_name]?.message}</li>
+          </div>
+        )}
+      </div>
+      <Select
+        className="react-select-container"
+        classNamePrefix="react-select"
+        options={options}
+        placeholder="Select a country..."
+        isClearable
+        isSearchable
+        value={
+          selectedCountry
+        }
+        onChange={handleChange}
+        styles={customStyles}
+      />
+    </div>
+  );
+};
+
+
+const customStyles = {
+  control: (provided, state) => ({
+    ...provided,
+    backgroundColor: "#bfd5b900",
+    border: "#00000000",
+  borderRadius: "30px"
+    
+   
+  }),
+  option: (provided, state) => ({
+    ...provided,
+    backgroundColor: state.isSelected
+      ? "#007bff"
+      : state.isFocused
+      ? "#e9ecef"
+      : null,
+    color: state.isSelected ? "#fff" : "#333",
+    "&:hover": {
+      backgroundColor: "#e9ecef",
+    },
+  }),
+  menu: (provided) => ({
+    ...provided,
+    zIndex: 9999, // Ensure the menu appears on top
+  }),
+};

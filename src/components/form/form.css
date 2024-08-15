@@ -1,0 +1,91 @@
+.form__banner{
+    background: url("https://i.imgur.com/wkRakyr.jpeg");
+    height: 80px;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  gap: 0px;
+}
+
+.form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 100px;
+  grid-row-gap:32px;
+	width: 80%;
+}
+
+#name {
+	grid-area: 1/1/2/2;
+}
+#phone {
+	grid-area: 1/2/2/3;
+}
+#email {
+	grid-area: 2/1/3/2;
+}
+#country {
+	grid-area: 2/2/3/3;
+}
+#message {
+	grid-area: 3 / 1 / 5 / 3;
+}
+
+.form__title{
+  width: 100% ;
+ display: flex ;
+ justify-content: center;
+}
+
+.input__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.error__container {
+  font-size: 18px;
+  
+  font-family: Lato, "sans-serif";
+
+}
+.error__line {
+  position: absolute;
+    list-style-type: none;
+    color: #EC2028;
+    padding: 3px;
+    font-family: Lato;
+
+}
+
+
+@media only screen and (max-width: 500px) {
+.form__grid {
+grid-template-columns: 1fr;
+grid-template-rows: repeat(6, 1fr);
+width: 85%;
+}
+
+.error__line {
+  font-size: 16px;
+
+  position: absolute;
+    list-style-type: none;
+    color: #EC2028;
+}
+
+
+#name { grid-area: 1 / 1 / 2 / 2; }
+#phone { grid-area: 2 / 1 / 3 / 2; }
+#email { grid-area: 3 / 1 / 4 / 2; }
+#country { grid-area: 4 / 1 / 5 / 2; }
+#message { grid-area: 5 / 1 / 7 / 2;  }
+}

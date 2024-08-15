@@ -7,22 +7,22 @@ import React, { lazy, Suspense } from "react";
 function App() {
   const Home = lazy(() => import("./screens/home/index"));
   const loading = (
-   <div class="loader">
-  <div class="circle">
-    <div class="dot"></div>
-    <div class="outline"></div>
+   <div className="loader">
+  <div className="circle">
+    <div className="dot"></div>
+    <div className="outline"></div>
   </div>
-  <div class="circle">
-    <div class="dot"></div>
-    <div class="outline"></div>
+  <div className="circle">
+    <div className="dot"></div>
+    <div className="outline"></div>
   </div>
-  <div class="circle">
-    <div class="dot"></div>
-    <div class="outline"></div>
+  <div className="circle">
+    <div className="dot"></div>
+    <div className="outline"></div>
   </div>
-  <div class="circle">
-    <div class="dot"></div>
-    <div class="outline"></div>
+  <div className="circle">
+    <div className="dot"></div>
+    <div className="outline"></div>
   </div>
 </div>
   );
