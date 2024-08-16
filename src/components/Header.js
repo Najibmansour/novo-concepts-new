@@ -15,6 +15,7 @@ const Header = () => {
   };
 
   const toggleMenu = () => {
+    console.log("test");
     setMenuOpen(!menuOpen);
   };
   const navigate = useNavigate();
@@ -31,11 +32,11 @@ const Header = () => {
         </div>
 
         <div className="burger-menu" onClick={toggleMenu}>
-          <div className={'line ${menuOpen ? "open" : ""}'}></div>
-          <div className={'line ${menuOpen ? "open" : ""}'}></div>
-          <div className={'line ${menuOpen ? "open" : ""}'}></div>
+          <div className={`line ${menuOpen ? "open" : ""}`}></div>
+          <div className={`line ${menuOpen ? "open" : ""}`}></div>
+          <div className={`line ${menuOpen ? "open" : ""}`}></div>
         </div>
-        <ul className={'navbar-links ${menuOpen ? "open" : ""}'}>
+        <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
           {/* <li className="dropdown">
             About us
             <ul className="dropdown-menu">
