@@ -113,7 +113,7 @@ function StarIcon(props) {
 
 
 
-export const CountrySelector = ({ setValue, use_name, title, errorsOBJ }) => {
+export const CountrySelector = ({ setValue, use_name, title, errorsOBJ, setError }) => {
   const [options, setOptions] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState({
     value: "No Country",
@@ -144,10 +144,13 @@ export const CountrySelector = ({ setValue, use_name, title, errorsOBJ }) => {
 
 
   useEffect(() => {
-    if (selectedCountry !== "") {
+    if (selectedCountry.value !== "No Country") {
       console.log("Selected country:", selectedCountry);
       setValue(use_name, selectedCountry.value, { shouldValidate: true });
     }
+
+    setError(use_name, { required: "Message is required" });      
+
   }, [selectedCountry]);
 
   const handleChange = (selectedOption) => {
@@ -188,7 +191,7 @@ const customStyles = {
     ...provided,
     backgroundColor: "#bfd5b900",
     border: "#00000000",
-  borderRadius: "30px"
+    borderRadius: "30px",
     
    
   }),

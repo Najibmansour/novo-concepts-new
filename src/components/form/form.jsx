@@ -14,6 +14,7 @@ const ContactForm = () => {
     handleSubmit,
     reset,
     setValue,
+    setError,
     formState: { errors },
   } = useForm();
 
@@ -122,6 +123,7 @@ const ContactForm = () => {
               required: "Country is required",
             }}
             setValue={setValue}
+            setError={setError}
           />
         </div>
         <div id="message">

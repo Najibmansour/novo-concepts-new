@@ -61,13 +61,12 @@
   position: absolute;
     list-style-type: none;
     color: #EC2028;
-    padding: 3px;
     font-family: Lato;
-
+    margin-top: -15px;
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1000px) {
 .form__grid {
 grid-template-columns: 1fr;
 grid-template-rows: repeat(6, 1fr);
@@ -76,10 +75,10 @@ width: 85%;
 
 .error__line {
   font-size: 16px;
-
   position: absolute;
     list-style-type: none;
     color: #EC2028;
+    margin-top: 0px;
 }
 
 
